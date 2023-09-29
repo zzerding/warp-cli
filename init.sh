@@ -34,7 +34,7 @@ if [ -z "$DEBUG_WARP"  ]; then
   ln -s /dev/null $base_path/cfwarp_service_log.txt
   ln -s /dev/null $base_path/cfwarp_service_stats.txt
   echo "start warp-svc"
-  warp-svc | grep -v DEBUG  "$LOG_FILE" 2>&1 &
+  warp-svc | grep -v DEBUG  >> "$LOG_FILE" 2>&1 &
 fi
 
 # Wait for 2 seconds to allow the service to start

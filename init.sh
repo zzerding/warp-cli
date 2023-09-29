@@ -15,6 +15,7 @@ cleanup(){
 trap 'cleanup' SIGINT SIGTERM
 
 # Define the log file path
+mkdir -p /var/log/warp
 LOG_FILE=/var/log/warp/warp-svc.log
 
 # Start the "warp-svc" service and redirect its output to the log file
